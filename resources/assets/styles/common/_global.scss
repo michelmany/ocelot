@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo:wght@100;200&display=swap");
+
+html {
+  font-size: 0.8rem;
+
+  @include media-breakpoint-up(xl) {
+    font-size: 1rem;
+  }
+}
+
+@function to-rem($value) {
+  $remValue: ($value / 16) + rem;
+
+  @return $remValue;
+}
+
+body {
+  font-family: "Exo", sans-serif;
+}
+
+.section-bg-dark {
+  background-color: $grafitti;
+}
+
+.ocelot-section {
+  padding-top: to-rem(100);
+  padding-bottom: to-rem(100);
+}
+
+.ocelot-subtitle {
+  color: $yellow;
+  font-size: to-rem(20);
+  text-transform: uppercase;
+}

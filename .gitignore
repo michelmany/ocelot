@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # ignore everything in the root except the "wp-content" directory.
 !wp-content/
 
@@ -21,3 +22,14 @@ node_modules/
 *.log
 *.sql
 *.sqlite
+=======
+# Include your project-specific ignores in this file
+# Read about how to use .gitignore: https://help.github.com/articles/ignoring-files
+.cache-loader
+dist
+node_modules
+npm-debug.log
+yarn-error.log
+/vendor
+resources/assets/config-local.json
+>>>>>>> 8a83c4d (First commit)

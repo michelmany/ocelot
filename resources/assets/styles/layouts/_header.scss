@@ -1,0 +1,41 @@
+.banner .nav li {
+  @extend .nav-item;
+}
+
+.banner .nav a {
+  @extend .nav-link;
+}
+
+.navbar {
+  background-color: $grafitti;
+
+  &__logo {
+    max-width: to-rem(255);
+    margin-bottom: -15px;
+  }
+
+  .main-menu {
+    padding-top: 24px;
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    .menu-item {
+      &:not(:last-of-type) {
+        margin-right: to-rem(44);
+      }
+
+      a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: to-rem(18);
+
+        &:hover {
+          color: $yellow;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

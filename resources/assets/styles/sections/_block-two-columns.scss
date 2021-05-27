@@ -1,0 +1,25 @@
+.block-two-columns {
+  padding-top: to-rem(100);
+  padding-bottom: to-rem(100);
+
+  &__subtitle {
+    @extend .ocelot-subtitle;
+  }
+
+  &__title {
+    color: #fff;
+    margin-bottom: to-rem(45);
+    font-size: to-rem(80);
+    line-height: 0.85em;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: to-rem(98);
+    }
+  }
+
+  &__copy {
+    color: #fff;
+    opacity: 0.5;
+    font-size: to-rem(22);
+  }
+}

@@ -1,0 +1,25 @@
+.section-contact {
+  background-color: #252c30;
+  padding-top: 100px;
+  padding-bottom: 130px;
+
+  &__container {
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 740px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__title {
+    font-size: 60px;
+    color: white;
+  }
+
+  &__subline {
+    color: white;
+    opacity: 0.49;
+    font-size: to-rem(22);
+    margin-bottom: to-rem(40);
+  }
+}

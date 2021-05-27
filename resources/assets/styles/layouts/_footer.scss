@@ -1,0 +1,38 @@
+.ocelot-footer {
+  background: black;
+  color: white;
+  padding-bottom: 50px;
+
+  &__logo {
+    width: 113px;
+    margin-top: -10px;
+    margin-bottom: 22px;
+  }
+
+  &__menu {
+    li {
+      font-size: to-rem(18);
+      text-transform: uppercase;
+      padding: 0 22px;
+      line-height: 15px;
+
+      a {
+        color: white;
+
+        &:hover {
+          color: $yellow;
+          text-decoration: none;
+        }
+      }
+
+      &:not(:last-of-type) {
+        border-right: 1px solid #383f43;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: to-rem(14);
+    opacity: 0.32;
+  }
+}
