@@ -1,8 +1,22 @@
 $card-bg-color: #263036;
 
 .block-services-cards {
+  position: relative;
+  z-index: 9;
+
   .service-card {
     overflow-x: hidden;
+    max-width: 470px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 15px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 100%;
+    }
 
     &.col-lg-4 {
       padding-left: 8px;
@@ -11,14 +25,10 @@ $card-bg-color: #263036;
 
     &__content {
       overflow-x: hidden;
-      padding: to-rem(25);
+      padding: 3rem 1.4rem 1.4rem;
       padding-bottom: to-rem(10);
       color: #fff;
       background-color: $card-bg-color;
-
-      @include media-breakpoint-up(xl) {
-        padding: to-rem(35);
-      }
 
       @include media-breakpoint-up(xxl) {
         padding: to-rem(55);
@@ -26,14 +36,27 @@ $card-bg-color: #263036;
     }
 
     &__image {
-      max-width: 100%;
+      max-width: 204px;
+      margin-bottom: 50px;
+      transform: translateX(-50%);
+      left: 50%;
+      position: relative;
     }
 
     &__title {
       color: white;
-      font-size: to-rem(50);
+      font-size: to-rem(35);
+      font-weight: 200;
       line-height: 1em;
       margin-bottom: to-rem(20);
+
+      @include media-breakpoint-up(sm) {
+        font-size: to-rem(50);
+      }
+
+      @include media-breakpoint-up(lg) {
+        font-size: to-rem(35);
+      }
     }
 
     .ocelot-subtitle {
@@ -41,9 +64,17 @@ $card-bg-color: #263036;
     }
 
     &__description {
-      font-size: to-rem(20);
+      font-size: 1rem;
       color: white;
       opacity: 0.5;
+
+      @include media-breakpoint-up(xxl) {
+        font-size: to-rem(20);
+      }
+
+      @include media-breakpoint-up(xxl) {
+        font-size: to-rem(20);
+      }
     }
 
     &__btn-wrapper {
@@ -67,7 +98,7 @@ $card-bg-color: #263036;
     &__button {
       border-radius: 0;
       border: 0;
-      font-size: to-rem(20);
+      font-size: to-rem(16);
       color: black;
       background: transparent;
       height: to-rem(55);
@@ -76,8 +107,11 @@ $card-bg-color: #263036;
       align-items: center;
       display: inline-flex;
       padding: 0 to-rem(40);
+      text-transform: uppercase;
 
-      @extend .text-uppercase;
+      @include media-breakpoint-up(xxl) {
+        font-size: to-rem(20);
+      }
 
       &::before {
         transition: 0.2s;
@@ -94,6 +128,13 @@ $card-bg-color: #263036;
         transform: skewX(-40deg);
       }
 
+      &:active,
+      &:focus {
+        box-shadow: none !important;
+        background: transparent !important;
+        color: black !important;
+      }
+
       &:hover {
         &::before {
           background: white;
@@ -102,11 +143,15 @@ $card-bg-color: #263036;
     }
 
     .plataforms {
-      transform: scale(0.6);
+      transform: scale(0.65);
       opacity: 0.2;
 
+      @include media-breakpoint-up(lg) {
+        transform: scale(0.6);
+      }
+
       @include media-breakpoint-up(xxl) {
-        transform: scale(0.8);
+        transform: scale(0.9);
       }
     }
   }

@@ -11,10 +11,14 @@
 
   &__menu {
     li {
-      font-size: to-rem(18);
+      font-size: to-rem(16);
       text-transform: uppercase;
       padding: 0 22px;
       line-height: 15px;
+
+      @include media-breakpoint-up(xxl) {
+        font-size: to-rem(18);
+      }
 
       a {
         color: white;
@@ -34,5 +38,9 @@
   &__copy {
     font-size: to-rem(14);
     opacity: 0.32;
+
+    @include media-breakpoint-up(xxl) {
+      font-size: to-rem(16);
+    }
   }
 }
