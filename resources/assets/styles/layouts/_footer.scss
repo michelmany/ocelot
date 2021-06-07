@@ -11,10 +11,15 @@
 
   &__menu {
     li {
-      font-size: to-rem(16);
+      font-size: to-rem(20);
       text-transform: uppercase;
-      padding: 0 22px;
+      padding: 15px 22px;
       line-height: 15px;
+
+      @include media-breakpoint-up(md) {
+        padding: 0 22px;
+        font-size: to-rem(16);
+      }
 
       @include media-breakpoint-up(xxl) {
         font-size: to-rem(18);
@@ -30,7 +35,9 @@
       }
 
       &:not(:last-of-type) {
-        border-right: 1px solid #383f43;
+        @include media-breakpoint-up(md) {
+          border-right: 1px solid #383f43;
+        }
       }
     }
   }

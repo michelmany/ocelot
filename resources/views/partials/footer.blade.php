@@ -4,10 +4,10 @@
 
     <nav class="ocelot-footer__menu">
       @if (has_nav_menu('primary_navigation'))
-        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled d-flex justify-content-center']) !!}
+        {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'list-unstyled d-md-flex justify-content-md-center']) !!}
       @endif
     </nav>
 
-    <p class="ocelot-footer__copy">© All Rights Reserved Ocelot 2021    |    Site Design & Branding by Fully Illustrated Ltd    |    Developed by Michel Moraes</p>
+    <p class="ocelot-footer__copy">© All Rights Reserved Ocelot 2021 <br> Site Design & Branding by Fully Illustrated Ltd <br> Developed by Michel Moraes</p>
   </div>
 </footer>
