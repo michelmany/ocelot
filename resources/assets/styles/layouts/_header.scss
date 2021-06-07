@@ -9,7 +9,6 @@
 .navbar {
   background-color: $grafitti;
   height: 65px;
-  overflow: hidden;
 
   @include media-breakpoint-up(xxl) {
     height: 88px;
@@ -18,7 +17,7 @@
   &__logo {
     position: relative;
     z-index: 9999;
-    max-width: to-rem(165);
+    max-width: 185px;
     margin-bottom: -15px;
 
     @include media-breakpoint-up(xxl) {
@@ -94,21 +93,11 @@
   padding: 10px;
   cursor: pointer;
   position: relative;
-  top: 0;
+  top: 10px;
   left: 0;
   z-index: 1;
   -webkit-user-select: none;
   user-select: none;
-
-  a {
-    text-decoration: none;
-    color: white;
-    transition: color 0.3s ease;
-
-    &:hover {
-      color: $yellow;
-    }
-  }
 
   span {
     display: block;
@@ -116,7 +105,7 @@
     height: 2px;
     margin-bottom: 5px;
     position: relative;
-    background: white;
+    background: #828282;
     z-index: 1;
     transform-origin: 8px -2px;
     transition:
@@ -129,7 +118,7 @@
     }
 
     &:nth-last-child(2) {
-      transform-origin: 0% 100%;
+      transform-origin: 50% 100%;
     }
   }
 }
@@ -140,7 +129,7 @@
  */
 #menu-toggle.active span {
   opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
+  transform: rotate(45deg) translate(-6px, -10px);
   background: $yellow;
 }
 
@@ -166,10 +155,8 @@
 #menu-mobile {
   position: absolute;
   width: 100%;
-  margin: 0 -50px 0 0;
-  padding: 50px;
-  padding-top: 125px;
-  background: lighten($grafitti, 5%);
+  padding: 95px 50px 35px 50px;
+  background: black;
   list-style-type: none;
 
   /* to stop flickering of text in safari */

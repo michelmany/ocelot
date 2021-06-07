@@ -21,16 +21,15 @@
 
   &__logo {
     width: 100%;
-    max-width: 575px;
+    max-width: 375px;
+    margin-bottom: to-rem(15);
 
     @include media-breakpoint-up(md) {
       max-width: 480px;
-      margin-bottom: to-rem(15);
     }
 
     @include media-breakpoint-up(xxl) {
       max-width: 540px;
-      margin-bottom: to-rem(15);
     }
   }
 
@@ -48,12 +47,16 @@
 }
 
 .plataforms {
-  @include media-breakpoint-down(sm) {
-    transform: scale(0.6);
-  }
-
   @include media-breakpoint-down(xl) {
     transform: scale(0.8);
+  }
+
+  @include media-breakpoint-down(sm) {
+    transform: scale(0.7);
+  }
+
+  @include media-breakpoint-down(xs) {
+    transform: scale(0.6);
   }
 
   li {
