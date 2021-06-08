@@ -13,7 +13,7 @@ export default {
       menuMobile.classList.toggle('active');
       this.classList.toggle('active');
     })
-  },  
+  },
 
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

@@ -6,16 +6,28 @@
 
 @section('content')
 
-  <section class="hero section-bg-dark" style="background-image: url(@asset('images/hero-bg.jpg')); ">
+  <section class="hero section-bg-dark" style="background-image: url(@field('hero_background_image'))">
     <div class="hero__content text-center">
-      <img src="@asset('images/hero-ocelot-logo@2x.png')" alt="Ocelot Logo" class="hero__logo">
-      <h2 class="hero__subtitle">GAME CERTIFICATION, PORTING AND OPTIMISATION SPECIALISTS.</h2>
-      <ul class="plataforms list-unstyled d-flex justify-content-center align-items-center">
-        <li><img src="@asset('images/platform-logo-01.svg')" alt="" class="platforms__logo"></li>
-        <li><img src="@asset('images/platform-logo-02.svg')" alt="" class="platforms__logo"></li>
-        <li><img src="@asset('images/platform-logo-03.svg')" alt="" class="platforms__logo"></li>
-        <li><img src="@asset('images/platform-logo-04.svg')" alt="" class="platforms__logo"></li>
-      </ul>
+      @hasfield('hero_logo')
+        <img src="@field('hero_logo', 'url')" alt="@field('hero_logo', 'alt')" class="hero__logo">
+      @endfield
+
+      @hasfield('hero_subtitle')
+        <h2 class="hero__subtitle">@field('hero_subtitle')</h2>
+      @endfield
+
+      @hasfields('plataforms')
+        <ul class="plataforms list-unstyled d-flex justify-content-center align-items-center">
+          @fields('plataforms')
+            <li>
+              <img 
+                src="@sub('platform_logo', 'url')" 
+                alt="@sub('platform_logo', 'alt')" 
+                class="platforms__logo">
+            </li>  
+          @endfields
+        </ul>
+      @endhasfields
     </div>
   </section>
 
@@ -38,7 +50,7 @@
 
           <div class="col-md-8 col-lg-7 col-xl-6">
             <h4 class="block-two-columns__subtitle text-uppercase">Video Game</h4>
-            <h2 class="block-two-columns__title text-uppercase">CERTIFICATION, PORTING & OPTIMISATION</h2>
+            <h2 class="block-two-columns__title text-uppercase">Certification, Porting & Optimisation</h2>
             <p class="block-two-columns__copy">
               Hello there, we are Ocelot.<br><br>
               We specialise in a variety of development solutions including game certification, porting and optimisation. We have a vast degree of experience across many different platforms allowing us to deliver effective solutions based on years of experience. Please read below to find out more about our core services. If you want to get in touch, please use the contact option  and we’d love to hear from you.
